@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabricação e Montagem de Móveis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Fabricação e Montagem de Móveis</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="project.html">Projetar Móvel</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Bem-vindo à Nossa Empresa</h2>
+            <p>Oferecemos soluções personalizadas para fabricação e montagem de móveis sob medida.</p>
+        </section>
+        <section>
+            <h2>Nossos Serviços</h2>
+            <p>Crie seu próprio móvel e obtenha o projeto com as medidas detalhadas.</p>
+        </section>
+    </main>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    <footer>
+        <p>&copy; 2024 Fabricação e Montagem de Móveis. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Projeto de Móvel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Criar Projeto de Móvel</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="project.html">Projetar Móvel</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Desenhe seu Móvel</h2>
+            <canvas id="canvas" width="500" height="500" style="border:1px solid #000;"></canvas>
+            <br>
+            <button onclick="generateProject()">Gerar Projeto</button>
+        </section>
+        <section id="projectOutput">
+            <h2>Projeto Gerado</h2>
+            <p id="projectDetails"></p>
+        </section>
+    </main>
+    <script src="project.js"></script>
+</body>
+</html>
+function generateProject() {
+    const canvas = document.getElementById('canvas');
+    const context = canvas.getContext('2d');
+
+    // Desenhar um retângulo simples como exemplo de móvel
+    context.fillStyle = "#FF0000";
+    context.fillRect(50, 50, 200, 100);
+
+    // Geração de medidas fictícias
+    const width = 200;  // Largura fictícia
+    const height = 100; // Altura fictícia
+
+    const projectDetails = `Dimensões do Móvel: Largura = ${width}cm, Altura = ${height}cm`;
+    document.getElementById('projectDetails').innerText = projectDetails;
+}
